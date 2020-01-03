@@ -2,7 +2,7 @@
 
 BASEDIR=$(dirname "$0")
 
-sudo pacman -S zsh vim curl
+sudo pacman -S zsh vim curl inetutils
 pikaur -S antigen-git
 
 ln -fs $BASEDIR/zshrc ~/.zshrc
