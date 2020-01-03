@@ -5,12 +5,9 @@ antigen use oh-my-zsh
 antigen bundle git
 antigen bundle sudo
 antigen bundle vim
-antigen bundle pass
-antigen bundle git-extras
-antigen bundle gpg-agent
 antigen bundle kubectl
 
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme cloud
 antigen apply
 
 if [ ! -d ~/bin ]; then
@@ -33,15 +30,3 @@ HIST_STAMPS="dd.mm.yyyy"
 
 source ~/.functions
 source ~/.aliases
-
-if [ ! -d ~/.sdk ]; then
-	mkdir -p ~/.sdk
-fi
-
-if [ ! -f ~/.sdk/export ]; then
-	touch ~/.sdk/export
-fi
-
-# added by travis gem
-[ -f /Users/rt1330/.travis/travis.sh ] && source /Users/rt1330/.travis/travis.sh
-source ~/.common_env
