@@ -7,7 +7,7 @@ antigen bundle sudo
 antigen bundle vim
 antigen bundle kubectl
 
-antigen theme cloud
+antigen theme ys
 antigen apply
 
 if [ ! -d ~/bin ]; then
