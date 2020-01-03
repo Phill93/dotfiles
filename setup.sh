@@ -3,7 +3,7 @@
 BASEDIR=$(dirname "$0")
 
 sudo pacman -S zsh vim curl
-pikaur -S oh-my-zsh-git
+pikaur -S antigen-git
 
 ln -fs $BASEDIR/zshrc ~/.zshrc
 ln -fs $BASEDIR/aliases ~/.aliases
