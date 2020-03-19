@@ -9,6 +9,7 @@ antigen bundle pass
 antigen bundle git-extras
 antigen bundle gpg-agent
 antigen bundle kubectl
+antigen bundle zsh-users/zsh-syntax-highlighting
 
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 antigen apply
