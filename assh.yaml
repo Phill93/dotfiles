@@ -1,0 +1,26 @@
+---
+hosts:
+  "*.iai.kit.edu":
+    Inherits: iai-template
+
+  "*.server.elab2.kit.edu":
+    Inherits: iai-template
+
+templates:
+  iai-template:
+    User: infra
+    Port: 24
+
+defaults:
+  ControlMaster: auto
+  ControlPath: ~/tmp/.ssh/cm/%h-%p-%r.sock
+  ControlPersist: true
+  Port: 22
+  Hooks:
+    BeforeConfigWrite:
+      - 'exec set -x; cp {{.SSHConfigPath}} {{.SSHConfigPath}}.bkp'
+    AfterConfigWrite:
+      - notify "{{.SSHConfigPath}} has been rewritten"
+    OnDisconnect:
+      - "write  SSH connection to {{.Host.HostName}} closed, {{.Stats.WrittenBytes }} bytes written in {{.Stats.ConnectionDuration}} ({{.Stats.AverageSpeed}}bps)"
+      - "notify SSH connection to {{.Host.HostName}} closed, {{.Stats.WrittenBytes }} bytes written in {{.Stats.ConnectionDuration}} ({{.Stats.AverageSpeed}}bps)"
