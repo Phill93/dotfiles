@@ -14,6 +14,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'buc0/my-vim-colors'
 Plugin 'vim-airline/vim-airline'
 Plugin 'tpope/vim-sleuth'
+Plugin 'editorconfig/editorconfig-vim'
 
 " end vundle phase
 call vundle#end()
