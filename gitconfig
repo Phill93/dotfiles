@@ -20,3 +20,5 @@
 	versiontag = v
 [credential]
     helper = cache --timeout=600
+[pull]
+	rebase = false

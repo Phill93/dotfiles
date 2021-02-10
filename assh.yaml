@@ -6,11 +6,16 @@ hosts:
   "*.server.elab2.kit.edu":
     Inherits: iai-template
 
+  hermes.phill93.net:
+    Inherits: privat-template
+
 templates:
   iai-template:
     User: infra
     Port: 24
 
+  privat-template:
+    User: danielbacher
 defaults:
   ControlMaster: auto
   ControlPath: ~/tmp/.ssh/cm/%h-%p-%r.sock
