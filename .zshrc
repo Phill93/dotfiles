@@ -32,6 +32,10 @@ fi
 
 export PATH="$PATH:$HOME/bin"
 
+if [ -d ~/Library/Python/3.8/bin ]; then 
+  export PATH="$PATH:$HOME/Library/Python/3.8/bin"
+fi
+
 if [ ! -f ~/bin/iterm2_integration.zsh ]; then
   curl -L https://iterm2.com/shell_integration/zsh -o ~/bin/iterm2_integration.zsh
 fi
