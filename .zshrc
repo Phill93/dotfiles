@@ -5,7 +5,7 @@ fi
 if [ -f /usr/local/share/antigen/antigen.zsh ]; then
   source /usr/local/share/antigen/antigen.zsh
 elif [ -f /opt/homebrew/share/antigen/antigen.zsh ]; then
-  source /opt/homebrew/share/antigen/antigen.szh
+  source /opt/homebrew/share/antigen/antigen.zsh
 else
   echo "Antigen not found"
   exit 1
