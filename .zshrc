@@ -1,3 +1,7 @@
+if [ -d "/opt/homebrew/bin" ] && [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
+        PATH="${PATH:+"$PATH:"}/opt/homebrew/bin"
+fi
+
 if [ -f /usr/local/share/antigen/antigen.zsh ]; then
   source /usr/local/share/antigen/antigen.zsh
 elif [ -f /opt/homebrew/share/antigen/antigen.zsh ]; then
