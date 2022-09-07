@@ -1,4 +1,5 @@
 alias nano=vim
 alias cat=bat
 alias ping=prettyping
-alias ssh="assh wrapper ssh"
+alias ssh="assh wrapper ssh --"
+alias kak="kubectl apply -k"
