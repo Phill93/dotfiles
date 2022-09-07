@@ -1,6 +1,11 @@
 if [ -d "/opt/homebrew/bin" ] && [[ ":$PATH:" != *":/opt/homebrew/bin:"* ]]; then
-        PATH="${PATH:+"$PATH:"}/opt/homebrew/bin"
+        PATH="/opt/homebrew/bin${PATH:+":$PATH"}"
 fi
+
+if [ -d "/opt/homebrew/sbin" ] && [[ ":$PATH:" != *":/opt/homebrew/sbin:"* ]]; then
+        PATH="/opt/homebrew/sbin${PATH:+":$PATH"}"
+fi
+
 
 if [ -f /usr/local/share/antigen/antigen.zsh ]; then
   source /usr/local/share/antigen/antigen.zsh
@@ -61,3 +66,4 @@ fi
 
 # added by travis gem
 [ -f /Users/rt1330/.travis/travis.sh ] && source /Users/rt1330/.travis/travis.sh
+export XDG_CONFIG_HOME=$HOME/.config
