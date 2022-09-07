@@ -22,3 +22,7 @@
     helper = cache --timeout=600
 [pull]
 	rebase = false
+[status]
+	submoduleSummary = true
+[init]
+	defaultBranch = default
